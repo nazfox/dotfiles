@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+password_store="$HOME/.password-store"
+
+selected=$(echo "$@" | sed -E "s/\/?[^\/]+\/\.\.$//")
+
+if [ -f "$password_store/$selected.gpg" ]; then
+    (pass -c "$selected" >/dev/null) &
+else
+    pass_list=$(ls "$password_store/$selected")
+
+    for pass in $pass_list; do
+        if [ -z "$selected" ]; then
+            line="$pass"
+        else
+            line="$selected/$pass"
+        fi
+
+        echo "$line" | sed -E 's/\.gpg$//'
+    done
+
+    if [ ! -z "$selected" ]; then
+        echo "$selected/.."
+    fi
+fi
+
