@@ -1,0 +1,3 @@
+[submodule "home/.config/polybar/polybar_spotify"]
+	path = home/.config/polybar/polybar_spotify
+	url = github:nazfox/polybar-spotify-w-cache.git
