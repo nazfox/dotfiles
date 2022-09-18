@@ -71,7 +71,7 @@ alias ..5 'cd ../../../../..'
 
 alias bc 'bc -l'
 
-alias g 'git status -sb'
+alias gs 'git status -sb'
 
 alias ga 'git add'
 alias gr 'git rm'
