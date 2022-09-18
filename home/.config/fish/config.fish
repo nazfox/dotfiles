@@ -21,5 +21,8 @@ set -gx LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 # thefuck
 thefuck --alias | source
 
+# homeshick
+source "$HOME/.homesick/repos/homeshick/homeshick.fish"
+
 # starship
 starship init fish | source
