@@ -17,8 +17,8 @@ alias fvim  'fzf --multi --preview "cat {1}" | xargs -ro nvim'
 
 alias top  'htop'
 alias cat  'bat'
-alias find 'fd'
 alias grep 'rg'
+#alias find 'fd'  # `fd` cannot be a replacement for `find`
 
 alias todo 'rg "PERF|HACK|TODO|NOTE|FIX|WARNING"'
 
